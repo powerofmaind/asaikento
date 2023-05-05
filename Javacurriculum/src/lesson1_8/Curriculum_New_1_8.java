@@ -1,8 +1,9 @@
-package lesson1_4;
+package lesson1_8;
 
-public class Curriculum_New_1_4 {
+public class Curriculum_New_1_8 {
 
     public static void main(String[] args) {
+        
         // Q1 下記9個をローカル変数として宣言のみしてください
         //     ・バイト型・短整数型・整数型・長整数型
         byte myByte;
@@ -90,7 +91,6 @@ public class Curriculum_New_1_4 {
        int num2 = Integer.parseInt(num);
        int result = num1 + num2;
        System.out.println("ハローJAVA" + result);
-        
-    }
 
+    }
 }
