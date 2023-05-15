@@ -18,25 +18,34 @@ public class Qes7 {
 
         // 各生徒の成績を入力
         for (int i = 1; i <= n; i++) {
+            
+            //成績の入力時初めに出力される
             System.out.println(i + "人目の成績を入力してください");
+            
             //英語の点数の入力時に出力される
             System.out.print("英語の点数を入力してください : ");
             double englishScore = scanner.nextDouble();
             englishTotal += englishScore;
+            
             //数学の点数入力時に出力される
             System.out.print("数学の点数を入力してください : ");
             double mathScore = scanner.nextDouble();
             mathTotal += mathScore;
+            
            // 理科の点数の入力時に出力される
             System.out.print("理科の点数を入力してください : ");
             double scienceScore = scanner.nextDouble();
             scienceTotal += scienceScore;
+            
             //社会の点数の入力時に出力される
             System.out.print("社会の点数を入力してください : ");
             double socialScore = scanner.nextDouble();
             socialTotal += socialScore;
+            
             //すべての点数の平均点を算出する
             double average = (englishScore + mathScore + scienceScore + socialScore) / 4;
+            
+            //1人の全教科の平均点を出力する
             System.out.printf("%d人目の平均点は%.2f点です。\n", i, average);
         }
 
