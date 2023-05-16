@@ -23,12 +23,12 @@ public class Qes6 {
                 case "洗濯機":
                 case "加湿器":
                     index = switch (kaden) { //商品ごとの台数のランダム処理
-                        case "パソコン" ->  rand.nextInt(11) + 1;
-                        case "冷蔵庫" ->  rand.nextInt(11) + 1;
-                        case "扇風機" ->  rand.nextInt(11) + 1;
-                        case "洗濯機" ->  rand.nextInt(11) + 1;
-                        case "加湿器" ->  rand.nextInt(11) + 1;
-                        default -> rand.nextInt(11) + 1;
+                        case "パソコン" ->  rand.nextInt(12);
+                        case "冷蔵庫" ->  rand.nextInt(12);
+                        case "扇風機" ->  rand.nextInt(12);
+                        case "洗濯機" ->  rand.nextInt(12);
+                        case "加湿器" ->  rand.nextInt(12);
+                        default -> rand.nextInt(12);
                     };
                     break;
                 default:

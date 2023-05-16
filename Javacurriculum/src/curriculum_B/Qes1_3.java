@@ -12,18 +12,20 @@ public class Qes1_3 {
         //s.nextLine() を使用してユーザーから名前の入力を受け取り、変数 name に代入
         String name = s.nextLine();
         
-        if (name.length() <= 0 || name == null){ //入力された名前が0文字以下もしくはnullの場合の処理
-            System.out.println("名前を入力してください");
+        while (name.length() <= 0 || name == null || name.length() > 10 || !name.matches("[0-9a-zA-Z]+")) {
+            if (name.length() <= 0 || name == null) { // 入力された名前が0文字以下もしくはnullの場合の処理
+                System.out.println("名前を入力してください");
+            } else if (!name.matches("[0-9a-zA-Z]+")) { // 入力された名前が半角英数字以外で入力された場合の処理
+                System.out.println("半角英数字のみで名前を入力してください");
+            } else if (name.length() > 10) { // 名前が10文字を超えた場合の処理
+                System.out.println("「名前を10文字以内にしてください」");
+            }
+            System.out.println("「名前を入力してください」");
+            name = s.nextLine();
         }
-        else if (name.matches("[0-9a-zA-Z]+") == false) { //入力された名前が半角英数字以外で入力された場合の処理
-            System.out.println("半角英数字のみで名前を入力してください");
-        }
-        else if(name.length()  <= 10 && name.length() >= 1) { //名前を登録した時の処理
-            System.out.println("ユーザー名「" + name + "」を登録しました");
-        }
-        else if (name.length()  > 10) { //名前が10文字を超えた場合の処理
-            System.out.println("「名前を10文字以内にしてください」");
-        } 
+
+        System.out.println("ユーザー名「" + name + "」を登録しました");
+
          
       // じゃんけんのシステム
          int winCount = 0;
@@ -68,7 +70,6 @@ public class Qes1_3 {
          }
 
          System.out.println("じゃんけんを行った回数は" + totalPlayCount + "回です"); //じゃんけんの行った回数の表示
-         System.out.println("勝つまでにかかった合計回数は" + (winCount + drawCount) + "回です"); //勝つまでの回数の表示
          s.close(); }
 
      private static String getHandName(int hand) { //グー、チョキ、パーの対応する値の設定
