@@ -42,5 +42,5 @@ public class Qes6 {
             System.out.println(kaden + "の残り台数は" + index + "台です"); // 対象の商品の在庫数を表示する処理
         }
         s.close(); 
-        }
+    }
 }

@@ -10,8 +10,8 @@ public class Qes5 {
             // 1つの段を表示
             for (int j = 1; j <= 20; j++) {
                 int result = i * j;
-                if(j <10) {
-                System.out.print(String.format("%02d", j) + " * " + String.format("%02d", i) + " = " + String.format("%03d", result));
+                if(j <10) { //10以上3桁表示する判定を行って式を出力
+                    System.out.print(String.format("%02d", j) + " * " + String.format("%02d", i) + " = " + String.format("%03d", result));
                 }
                 else {
                     System.out.print(String.format("%03d", j) + " * " + String.format("%02d", i) + " = " + String.format("%03d", result));

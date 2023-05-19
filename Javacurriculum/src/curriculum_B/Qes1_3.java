@@ -74,7 +74,7 @@ public class Qes1_3 {
 
         System.out.println("\n"+"じゃんけんを行った回数は" + totalPlayCount + "回です"); //じゃんけんの行った回数の表示
         s.close(); 
-        }
+    }
 
     private static String getHandName(int hand) { // グー、チョキ、パーの対応する値の設定
         switch (hand) {
