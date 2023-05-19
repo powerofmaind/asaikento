@@ -41,8 +41,8 @@ public class Qes1_3 {
             }
 
             int computerHand = (int) (Math.random() * 3);
-            System.out.println("\n"+name + "の手は「" + getHandName(playerHand) + "」"); //自分の手を表示する処理
-            System.out.println("相手の手は「" + getHandName(computerHand) + "」"); //相手の手を表示する処理
+            System.out.println("\n"+name + "の手は「" + getHandName(playerHand) + "」"); // 自分の手を表示する処理
+            System.out.println("相手の手は「" + getHandName(computerHand) + "」"); // 相手の手を表示する処理
 
             int result = (playerHand - computerHand + 3) % 3;
             if (result == 0) { // あいこの時の処理
@@ -72,7 +72,7 @@ public class Qes1_3 {
             totalPlayCount++;
         }
 
-        System.out.println("\n"+"じゃんけんを行った回数は" + totalPlayCount + "回です"); //じゃんけんの行った回数の表示
+        System.out.println("\n"+"じゃんけんを行った回数は" + totalPlayCount + "回です"); // じゃんけんの行った回数の表示
         s.close(); 
     }
 
