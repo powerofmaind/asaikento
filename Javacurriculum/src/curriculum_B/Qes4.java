@@ -10,10 +10,10 @@ public class Qes4 {
                 int result = i * j;
                 System.out.printf("%02d * %02d = %02d", i, j, result);
                 if (j < 9) {
-                    System.out.print(" || ");
+                    System.out.print(" || "); //式の間の区切り
                 }
             }
-            System.out.println();
+            System.out.println(); //九九の段ごとに改行するコード
         }
     }
 }

@@ -10,11 +10,16 @@ public class Qes5 {
             // 1つの段を表示
             for (int j = 1; j <= 20; j++) {
                 int result = i * j;
-                System.out.print(String.format("%03d", j) + " * " + String.format("%03d", i) + " = " + String.format("%03d", result));
+                if(j <10) {
+                System.out.print(String.format("%02d", j) + " * " + String.format("%02d", i) + " = " + String.format("%03d", result));
+                }
+                else {
+                    System.out.print(String.format("%03d", j) + " * " + String.format("%02d", i) + " = " + String.format("%03d", result));
+                }
                 if (j < 20) {
-                    System.out.print(" || ");
+                    System.out.print(" || "); //式の間の区切り
                 } else {
-                    System.out.println();
+                    System.out.println(); //九九の段ごとに改行するコード
                 }
             }
         }

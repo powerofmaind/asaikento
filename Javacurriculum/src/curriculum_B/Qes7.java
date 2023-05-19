@@ -53,11 +53,13 @@ public class Qes7 {
         double socialAverage = (double)socialTotal / n;
         double totalAverage = ((double)englishTotal + (double)mathTotal + (double)scienceTotal + (double)socialTotal) / (4 * n);
 
-        System.out.println("\n");
+        System.out.println("\n"); //改行
+        
         // 3人の全教科の平均点を出力する
-        for(int j = 1; j < average.length; j++)
+         for(int j = 1; j < average.length; j++) {
             System.out.printf("%d人目の平均点は%.2f点です。\n", j, average[j]);
-
+        }
+        
         // 各教科の平均点と全体の平均点を出力
         System.out.printf("\n英語の平均点は%.2f点です。\n", englishAverage);
         System.out.printf("数学の平均点は%.2f点です。\n", mathAverage);
