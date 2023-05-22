@@ -36,60 +36,73 @@ public class Curriculum_New_1_18 {
 	}
 
 	// Q1
-	// 文字列と整数を引数として受け取り、コンソールに「Hello JavaSE 11」と出力
+	// 文字列と整数を引数String型(text)、int型(number)と定義する
 	public static void printHello(String text, int number) {
-		System.out.println("Hello " + text + " " + number);
+		// 引数を「Hello]と合わせ、コンソールに「Hello JavaSE 11」と出力
+		System.out.println("Hello " + text + " " + number + "\n");
 	}
 
 	// Q2
-	// 2つの整数を引数として受け取り、それらの値を乗算し、コンソールに出力
+	// 2つの整数を引数(int a)、(int b)と定義する
 	public static void multiplyNumbers(int a, int b) {
+		// a(5)とb(3)を乗算
 		int result = a * b;
-		System.out.println("Multiplication result: " + result);
+		// Multiplication result:と計算結果をコンソールに出力
+		System.out.println("Multiplication result: " + result + "\n");
 	}
 
 	// Q3 
 	// 整数の配列を引数として受け取り、配列の値を順番にコンソールに出力
 	public static void printArrayValues(int[] array) {
+		// arrayという名前の整数型の配列から要素を1つずつ取り出しnumberに格納しそれを表示
 		for (int number : array) {
+			// numberを出力
 			System.out.println(number);
 		}
+		// 改行
+		System.out.println();
 	}
 
 	// Q4
 	// 2つの小数を引数として受け取り、それらの値を和算し、結果をコンソールに出力
 	public static void addNumbers(double a, double b) {
+		// aとbを足す
 		double result = a + b;
-		System.out.println("Addition result: " + result);
+		// Addition result:と計算の結果を出力
+		System.out.println("Addition result: " + result + "\n");
 	}
 
 	// Q5
 	// 1から100までのランダムな整数を指定された回数だけ生成し、配列に格納します。生成された値は順番にコンソールに出力
 	public static int[] getRandomNumbers(int count) {
-		int[] randomNumbers = new int[count];
-		Random random = new Random();
+	    int[] randomNumbers = new int[count];
+	    Random random = new Random();
+	    // randomNumbersのi番目に1～100までのランダムな整数を格納する
+	    for (int i = 0; i < count; i++) {
+	        randomNumbers[i] = random.nextInt(100) + 1;
+	    }
 
-		for (int i = 0; i < count; i++) {
-			randomNumbers[i] = random.nextInt(100) + 1;
-			System.out.println(randomNumbers[i]);
-		}
-
-		return randomNumbers;
+	    return randomNumbers;
 	}
 
 	// Q6
 	// 整数の配列を引数として受け取り、配列の要素の平均値を計算して出力
 	public static double calculateAverage(int[] array) {
 		int sum = 0;
+		// arrayという名前の整数型の配列から要素を1つずつ取り出しsumにすべて足したものを格納する
 		for (int number : array) {
 			sum += number;
 		}
+		// 配列のすべての平均値を出力
 		return (double) sum / array.length;
 	}
-
+	
 	// Q7
 	// 引数として与えられた値が50以上であれば「turu」50以下であれば「false]と出力
 	public static boolean checkIfAbove50(double value) {
+	    // 改行
+		System.out.println();
+		// 引数valueが50以上であればtrueが返され、それ以外の場合はfalse
 		return value >= 50;
 	}
 }
