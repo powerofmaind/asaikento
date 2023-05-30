@@ -19,8 +19,10 @@ public class Animal {
 
 		// Q2：Dogクラスを呼び出して変数に代入し、動物の数をコンソールに出力してください。
 
+		Dog count = new Dog();
+		
 		// Dogクラスを呼び出して変数に代入
-		int animalCount = Dog.getCount();
+		int animalCount = count.getCount();
 
 		// 動物の数をコンソールに出力
 		System.out.println("動物の数: " + animalCount);
