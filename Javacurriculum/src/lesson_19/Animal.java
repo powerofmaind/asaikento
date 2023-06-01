@@ -9,23 +9,17 @@ public class Animal {
 		// Q1：Dogクラスを呼び出して変数に代入し、動物の名前をコンソールに出力してください。
 
 		// Dogクラスを呼び出してインスタンスを生成し、変数dogに代入
-		Dog dog = new Dog();
-
-		// dog変数から動物の名前を取得
-		String animalName = dog.getName();
+		Dog dname = new Dog();
 
 		// 動物の名前を「動物の名前:」の後に続けてコンソールに出力
-		System.out.println("動物の名前: " + animalName);
+		System.out.println("動物の名前: " + dname.name);
 
 		// Q2：Dogクラスを呼び出して変数に代入し、動物の数をコンソールに出力してください。
 
-		Dog count = new Dog();
-		
-		// Dogクラスを呼び出して変数に代入
-		int animalCount = count.getCount();
+		Dog dcount = new Dog(2);
 
 		// 動物の数をコンソールに出力
-		System.out.println("動物の数: " + animalCount);
+		System.out.println("動物の数: " + dcount.count);
 
 		// Q3：現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力してください
 
