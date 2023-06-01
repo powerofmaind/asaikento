@@ -1,27 +1,38 @@
 package lesson_19;
 
 public class Dog {
-	// Q1：フィールドに動物の名前の変数を定義してください。
-	private String name;
-	// Q2：フィールドに動物の数の変数を定義してください。
-	private int count;
-	// Q3：Q1で作成した変数に「犬」を代入するコンストラクタを作成してください。
-    public Dog() {
-        setName("犬");
+	// 動物の名前のフィールド
+	private String name; 
+	// 動物の数のフィールド
+	private int count; 
+
+	public Dog() {
+		// コンストラクタで名前を初期化
+		setName("犬"); 
+		// コンストラクタで数を初期化
+		setCount(1); 
 	}
+
+	public Dog(String name, int count) {
+		// 引数で受け取った名前を設定
+		setName(name);
+
+		// 引数で受け取った数を設定
+		setCount(count); 
+	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	// Q4：Q2で作成した変数に引数を代入するコンストラクタを作成してください。
-	{
-        setCount(1);
-	}
+
 	public int getCount() {
 		return count;
 	}
+
 	public void setCount(int count) {
 		this.count = count;
 	}
